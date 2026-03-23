@@ -120,7 +120,7 @@ const stageObjectName = "74e3a14e-20fe-464f-9b5b-9d50eae9e79c";
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
+        config.devicePixelRatio = Math.min(window.devicePixelRatio, 2);
       }
       else {
         // Desktop Unity Container: set the container/canvas for full screen
